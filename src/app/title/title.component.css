@@ -1,0 +1,11 @@
+.avatar {
+  max-height: 10em;
+}
+
+.no-link-style {
+  text-decoration: none;
+}
+
+.link-hover:hover {
+  transform: scale(1.02);
+}
