@@ -1,12 +1,13 @@
 FROM node As builder
-WORKDIR /home/monk/monkmitrad
+RUN mkdir-p /app
+WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json package-lock.json /app/
 
 RUN npm install
-COPY . .
+COPY . /app
 RUN npm run build --prod
 
 
 FROM nginx
-COPY --from=builder /home/monk/monkmitrad/dist/monkmitrad /usr/share/nginx/html
+COPY --from=builder /app/dist/monkmitrad /usr/share/nginx/html
