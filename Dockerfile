@@ -1,5 +1,5 @@
 FROM node As builder
-RUN mkdir-p /app
+RUN mkdir -p /app
 WORKDIR /app
 
 COPY package.json package-lock.json /app/
