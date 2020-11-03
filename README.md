@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 You can use this project with docker-compose.
 It is configured to work together with my [frontproxy](https://github.com/Monkmitrad/docker-frontproxy).
-You just have to put in the domain-name in the VIRTUAL_HOST variable in t he docker-compose.yaml file to be served.
+You just have to put in the domain-name in the VIRTUAL_HOST variable in the docker-compose.yaml file to be served.
 
 ## Development server
 
