@@ -1,0 +1,17 @@
+version: '2'
+services:
+  monkmitrad-de:
+    restart: always
+    image: monkmitrad/monkmitrad-de
+    build: .
+    environment:
+      - VIRTUAL_HOST=
+      - LETSENCRYPT_HOST=
+      - LETSENCRYPT_EMAIL=
+    networks:
+      - frontproxy_default
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+networks:
+  frontproxy_default:
+    external: true
