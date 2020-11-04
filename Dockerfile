@@ -5,7 +5,6 @@ WORKDIR /app
 COPY package.json package-lock.json /app/
 
 RUN npm install
-RUN npm audit fix
 COPY . /app
 RUN npm run build --prod
 
